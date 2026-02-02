@@ -1,95 +1,194 @@
-\documentclass[12pt]{article}
+\documentclass{ThesisLatviensis}
 
-\usepackage[latvian]{babel}
-\usepackage{setspace}
-\usepackage{enumitem}
-\usepackage{appendix}
-\usepackage{blindtext}
-\usepackage{pdflscape}
-\usepackage{ragged2e}
+\usepackage{lipsum}
 
-\usepackage
-[
-a4paper,
-left=3cm,
-right=2cm,
-top=2cm,
-bottom=2cm,
-]
-{geometry}
+\institution  {Latvijas Universitāte}
+\faculty      {Eksakto zinātņu un tehnoloģiju fakultāte}
+\department   {Datorikas nodaļa}
+\title        {Tēma}
+\subtitle     {Kvalifikācijas darbs}
+\author       {Jānis Paraudziņš}
+\studentID    {jp20040}
+\advisor      {Anna Kalniņa}
+\city         {Rīga}
+\keywords     {atslēgas; vārdi; šeit}
+\reviewer     {Sandis Bērziņš}
 
-\usepackage{fontspec}
-\setmainfont{Stix Two Text}
-% uncomment if writing math
-% \usepackage{unicode-math}
-% \setmathfont{Stix Two Math}
+\addbibresource{refs.bib}
 
-\usepackage{titlesec}
-\titlespacing{\section}{0pt}{0.5\baselineskip}{0.5\baselineskip}
-\titlespacing{\subsection}{0pt}{0.5\baselineskip}{0.5\baselineskip}
-\titlespacing{\subsubsection}{0pt}{0.5\baselineskip}{0.5\baselineskip}
-\titleformat*{\section}{\fontsize{14}{17}\mdseries\centering\MakeUppercase}
-\titleformat*{\subsection}{\fontsize{12}{15}\bfseries}
-\titleformat*{\subsubsection}{\fontsize{12}{15}\bfseries}
-
-\usepackage{graphicx}
-\usepackage[
-    font={small},
-    textfont={bf},
-    labelfont={it},
-    labelsep={space},
-    figurename={},
-    tablename={},
-]
-{caption}
-
-\usepackage{longtable}
-\usepackage{multirow}
-\usepackage{array}
-\renewcommand{\arraystretch}{1.5}
-\captionsetup[table]{position=t,justification=raggedleft,slc=off}
-
-\makeatletter
-\@addtoreset{figure}{section}
-\@addtoreset{table}{section}
-\makeatother
-
-% full label in refs
-\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}.~att.}
-\renewcommand{\thetable}{\arabic{section}.\arabic{table}.~tabula}
-
-\usepackage{biblatex}
-\addbibresource{references.bib}
-
-\usepackage{tocloft}
-\usepackage[bookmarks=true]{hyperref}
-\usepackage[open,numbered]{bookmark}
-% titlesec hyperref fix, section always on new page
-\newcommand{\sectionbreak}{\clearpage\phantomsection}
-
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-\linespread{1.5}
-\setlength{\parindent}{1cm}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
 
 \begin{document}
 
-\include{base/cover}
-\include{base/abstract}
-\include{base/toc}
-\include{base/glossary}
-\include{base/intro}
+\maketitle
 
-%%% SECTIONS %%%
+\section*{Anotācija}
+\lipsum[1]\par\textbf{Atslēgas vārdi}: \lipsum[3][1]
 
-\include{sections/example}
+\section*{Abstract}
+\lipsum[3]\par\textbf{Keywords}: \lipsum[4][1]
 
-%%%%%%%%%%%%%%%%
+\tableofcontents
 
-\include{base/conclusion}
-\include{base/references}
-\include{base/appendix}
+\Section{Apzīmējumu saraksts}
+\begin{description}[style=multiline, leftmargin=5em, itemsep=.25em]
+    \item[\LaTeX] programmatūra dokumentu sagatavošanai
+    \item[LU] Latvijas Universitāte
+    \item[EZTF] Eksakto zinātņu un tehnoloģiju fakultāte
+    \item[DN] Datorikas nodaļa
+\end{description}
+
+\Section{Ievads}
+\lipsum[1-3]
+
+\section{Lorem ipsum dolor sit amet}
+\lipsum[4] \cite{dirac}
+
+\begin{longtable}{| L{2.5cm} | L{3.5cm} | L{8.5cm} |}
+    \caption{Lorem Ipsum}
+    \label{tab:lipsum} \\
+
+    \hline
+    \textbf{Identificator} & \textbf{Classis} & \textbf{Descriptio} \\
+    \hline
+    \endfirsthead
+
+    LIP-001 &
+    Consectetur &
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \\
+    \hline
+
+    \multirow{4}{=}{GRP-Alpha} &
+    Adipiscing &
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \\
+    \cline{2-3}
+    &
+    Commodo &
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \\
+    \hline
+
+    LIP-002 &
+    Venenatis &
+    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. \\
+    \hline
+
+    LIP-003 &
+    Scelerisque &
+    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? \\
+    \hline
+
+    \multirow{4}{=}{GRP-Beta} &
+    Fermentum &
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. \\
+    \cline{2-3}
+    &
+    Volutpat &
+    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. \\
+    \hline
+
+    LIP-004 &
+    Pellentesque &
+    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \\
+    \hline
+
+    LIP-005 &
+    Bibendum &
+    Posuere urna nec tincidunt praesent semper feugiat nibh sed. Non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Amet consectetur adipiscing elit duis tristique sollicitudin. \\
+    \hline
+
+    LIP-006 &
+    Malesuada &
+    Ultricies tristique nulla aliquet enim tortor at. Amet aliquam id diam maecenas ultricies mi. In vitae turpis massa sed elementum tempus. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. \\
+    \hline
+
+    \multirow{3}{=}{GRP-Gamma} &
+    Vestibulum &
+    Feugiat in ante metus dictum at tempor commodo. Ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet. Id aliquet risus feugiat in ante metus dictum. \\
+    \cline{2-3}
+    &
+    Tincidunt &
+    Massa tincidunt dui ut ornare lectus sit amet. Vitae turpis massa sed elementum tempus egestas sed. \\
+    \hline
+\end{longtable}
+
+\subsection{Ut purus elit}
+\lipsum[5] \cite{einstein}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.5]{LU_logotips_LAT_1.pdf}
+    \caption{Latvijas Universitāte}
+    \label{fig:lu}
+\end{figure}
+\lipsum[6] (\ref{fig:lu})
+
+\subsection{Nam arcu libero}
+\lipsum[7] \cite{knuth-fa}
+\begin{equation}\label{e:barwq}
+    \begin{split}
+        H_c&=\frac{1}{2n} \sum^n_{l=0}(-1)^{l}(n-{l})^{p-2}
+        \sum_{l _1+\dots+ l _p=l}\prod^p_{i=1} \binom{n_i}{l _i}\\
+        &\quad\cdot[(n-l )-(n_i-l _i)]^{n_i-l _i}\cdot
+        \Bigl[(n-l )^2-\sum^p_{j=1}(n_i-l _i)^2\Bigr].
+    \end{split}
+\end{equation}
+\lipsum[8-9] (\ref{e:barwq})
+
+\subsection{Etiam euismod}
+\lipsum[10-11] \cite{knuthwebsite}
+
+\begin{listing}[t]
+    \begin{minted}{python}
+        import numpy as np
+
+        def incmatrix(genl1,genl2):
+            m = len(genl1)
+            n = len(genl2)
+            M = None #to become the incidence matrix
+            VT = np.zeros((n*m,1), int)  #dummy variable
+
+            #compute the bitwise xor matrix
+            M1 = bitxormatrix(genl1)
+            M2 = np.triu(bitxormatrix(genl2),1)
+
+            for i in range(m-1):
+                for j in range(i+1, m):
+                    [r,c] = np.where(M2 == M1[i,j])
+                    for k in range(len(r)):
+                        VT[(i)*n + r[k]] = 1;
+                        VT[(i)*n + c[k]] = 1;
+                        VT[(j)*n + r[k]] = 1;
+                        VT[(j)*n + c[k]] = 1;
+
+                        if M is None:
+                            M = np.copy(VT)
+                        else:
+                            M = np.concatenate((M, VT), 1)
+
+                        VT = np.zeros((n*m,1), int)
+
+            return M
+    \end{minted}
+\end{listing}
+
+\section{Consectetuer adipiscing elit}
+\lipsum[12] \cite{dirac}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.5]{LU_logotips_ENG.pdf}
+    \caption{University of Latvia}
+    \label{fig:ul}
+\end{figure}
+\lipsum[6] (\ref{fig:ul})
+
+\printbibliography[heading=bibintoc]
+
+\annexes
+\section{Lipsum1}
+\lipsum
+
+\section{Lipsum2}
+\lipsum
+
+\documentary
 
 \end{document}
