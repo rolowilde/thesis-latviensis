@@ -50,13 +50,14 @@
     pdfkeywords={\@keywords}
 }}
 
-\RequirePackage{babel}
-\RequirePackage{fvextra}
+\RequirePackage{babel}          % internationalization
+\RequirePackage{microtype}      %
+\RequirePackage{fvextra}        %
 \RequirePackage{csquotes}       %
 \RequirePackage{setspace}       % spacing environment
 \RequirePackage{enumitem}       %
 \RequirePackage{geometry}       % dimensions
-\RequirePackage{unicode-math}   % math font support
+\RequirePackage{amsmath}        %
 \RequirePackage{titlesec}       % title spacing & format
 \RequirePackage{graphicx}       % figures (includegraphics)
 \RequirePackage{caption}        % table & figure caption format
@@ -71,9 +72,20 @@
 \RequirePackage{minted}         % syntax highlighting in code
 \RequirePackage{xstring}        % string manipulation macros
 
-\setmainfont{STIX Two Text}
-\setmathfont{STIX Two Math}
-\setmonofont[Scale=MatchLowercase]{DejaVu Sans Mono}
+\RequirePackage{iftex}
+\iftutex % LuaTeX or XeTeX
+    \RequirePackage{unicode-math}
+    \setmainfont{STIX Two Text}
+    \setmathfont{STIX Two Math}
+    \setmonofont[Scale=MatchLowercase]{DejaVu Sans Mono}
+\else % pdfTeX
+    % diacritics look worse
+    \PassOptionsToPackage{T1}{fontenc}
+    \PassOptionsToPackage{scaled=0.9}{DejaVuSansMono}
+    \RequirePackage{fontenc}
+    \RequirePackage{stix2}
+    \RequirePackage{DejaVuSansMono}
+\fi
 
 \tolerance=1
 \emergencystretch=\maxdimen
