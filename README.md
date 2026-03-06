@@ -18,4 +18,4 @@ No directory structure (i.e. section and image folders) is provided intentionall
 
 Logotypes of University of Latvia contained in this repository are subject to copyright.
 
-*Thesis Latviensis* is licensed under the Creative Commons Attribution 4.0 International Public License.
+*Thesis Latviensis* is licensed under the Creative Commons Attribution 4.0 International Public License. No attributions to this template are necessary in your final work.

@@ -18,4 +18,4 @@ Pēc noklusējuma tiek pieņemts, ka latviešu valoda un angļu valoda ir primā
 
 Latvijas Universitātes logotipi, kas ietverti šajā repozitorija, ir pakļauti autortiesībām.
 
-*Thesis Latviensis* ir licencēts zem Creative Commons Attribution 4.0 International Public License.
+*Thesis Latviensis* ir licencēts zem Creative Commons Attribution 4.0 International Public License. Jūsu galīgajā darbā nav nepieciešams norādīt atsauces uz šo veidni.
