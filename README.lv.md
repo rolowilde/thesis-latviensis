@@ -8,7 +8,7 @@ STIX fonti nodrošina vienotu burtveidolu gan parastajam tekstam, gan matemātik
 
 ## Lietošana
 
-Izveidojiet repozitoriju no šīs veidnes GitHub vai Overleaf (gaidāms) vai noforkojiet to. Kā Latvijas Universitātes studentiem, jums ir pieejams [Overleaf](https://www.overleaf.com/edu/lu) Professional, kad pierakstaties ar SSO (LUIS lietotājvārds un parole). Lai sāktu darbu, ievadiet informāciju par savu darbu preambulā.
+Izveidojiet repozitoriju no šīs veidnes GitHub vai [Overleaf](https://www.overleaf.com/latex/templates/thesis-latviensis/qqgmrxxhxmfw) vai noforkojiet to. Kā Latvijas Universitātes studentiem, jums ir pieejams [Overleaf](https://www.overleaf.com/edu/lu) Professional, kad pierakstaties ar SSO (LUIS lietotājvārds un parole). Lai sāktu darbu, ievadiet informāciju par savu darbu preambulā.
 
 Pēc noklusējuma tiek pieņemts, ka latviešu valoda un angļu valoda ir primārā un sekundārā valoda attiecīgi. To var mainīt, norādot atslēgas vērtības opciju dokumenta klasei: `\documentclass[languages={latvian,spanish,english}]{ThesisLatviensis}` (pēc Babel sintakses). Šajā gadījumā *`english`* ir primārā valoda. Ņemiet vērā, ka tas nenodrošina tulkojumus dokumenta klases kodā iecietinātiem makrosiem.
 

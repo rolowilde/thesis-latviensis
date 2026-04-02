@@ -8,7 +8,7 @@ The STIX fonts provide a consistent typeface for both regular text and mathemati
 
 ## Usage
 
-Create a repository from this template on GitHub or Overleaf (pending), or fork it. As a student of University of Latvia, you are eligible for [Overleaf](https://www.overleaf.com/edu/lu) Professional when logged in with SSO (LUIS credentials). To get started, provide details about your work in the preambule.
+Create a repository from this template on GitHub or [Overleaf](https://www.overleaf.com/latex/templates/thesis-latviensis/qqgmrxxhxmfw), or fork it. As a student of University of Latvia, you are eligible for [Overleaf](https://www.overleaf.com/edu/lu) Professional when logged in with SSO (LUIS credentials). To get started, provide details about your work in the preambule.
 
 By default, bilingualism is assumed for Latvian and English as primary and secondary languages respectively. You may change that by providing a key-value option for the document class: `\documentclass[languages={latvian,spanish,english}]{ThesisLatviensis}` (Babel syntax). Here, *`english`* is the primary language. Note that this does not provide translations for hard-coded macros in the document class file.
 
